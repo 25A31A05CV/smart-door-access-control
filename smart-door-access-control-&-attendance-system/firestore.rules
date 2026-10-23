@@ -1,0 +1,38 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Authenticated App User Profiles
+    match /appUsers/{uid} {
+      allow read, write: if true;
+    }
+
+    // Enrolled Student & Faculty Profiles
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+
+    // Real-Time Access & Attendance Logs
+    match /accessLogs/{logId} {
+      allow read, write: if true;
+    }
+
+    // Administrator & Faculty Credentials (custom names, usernames, passwords)
+    match /adminCredentials/{adminId} {
+      allow read, write: if true;
+    }
+
+    // Connection testing
+    match /test/{docId} {
+      allow read, write: if true;
+    }
+  }
+}

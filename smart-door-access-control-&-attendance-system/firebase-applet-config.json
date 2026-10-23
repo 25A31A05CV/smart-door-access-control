@@ -1,0 +1,12 @@
+{
+  "projectId": "smart-door-access-control",
+  "appId": "1:66032607291:web:d07ebe97e5a382abd1bc1e",
+  "apiKey": "AIzaSyBsXQoolMa5FROueZAZl_MN5W4Hm1_FK9U",
+  "authDomain": "smart-door-access-control.firebaseapp.com",
+  "firestoreDatabaseId": "ai-studio-smartdooraccessc-955da0fc-13a0-47f1-8f2a-67e6936ac55c",
+  "storageBucket": "smart-door-access-control.firebasestorage.app",
+  "messagingSenderId": "66032607291",
+  "measurementId": "",
+  "oAuthClientId": "66032607291-bcvra3svvdk8a5sv1firsm34vuhvl97j.apps.googleusercontent.com",
+  "recaptchaSiteKey": ""
+}

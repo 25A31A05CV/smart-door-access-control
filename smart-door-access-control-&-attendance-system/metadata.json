@@ -1,0 +1,6 @@
+{
+  "name": "Smart Door Access Control & Attendance System",
+  "description": "Enterprise RFID, biometric face verification, automated attendance tracking, and physical door access control dashboard for college campuses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

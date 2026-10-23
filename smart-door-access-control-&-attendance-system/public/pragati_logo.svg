@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <!-- Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" />
+      <stop offset="30%" stop-color="#FFD54F" />
+      <stop offset="70%" stop-color="#FFB300" />
+      <stop offset="100%" stop-color="#FFA000" />
+    </linearGradient>
+
+    <!-- Wine Red Gradient -->
+    <linearGradient id="wineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8C3B45" />
+      <stop offset="50%" stop-color="#722F37" />
+      <stop offset="100%" stop-color="#4A0E17" />
+    </linearGradient>
+
+    <!-- Shadow filter -->
+    <filter id="crestShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Outer Ring with Gold Border -->
+  <circle cx="100" cy="100" r="94" fill="url(#wineGrad)" stroke="url(#goldGrad)" stroke-width="5" filter="url(#crestShadow)" />
+  <circle cx="100" cy="100" r="86" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="3,3" />
+
+  <!-- University Inner Shield -->
+  <path d="M100 34 C128 34 148 44 148 70 C148 116 100 144 100 144 C100 144 52 116 52 70 C52 44 72 34 100 34 Z"
+        fill="#58111A" stroke="url(#goldGrad)" stroke-width="3" />
+
+  <!-- University Stars (Excellence) -->
+  <g fill="url(#goldGrad)">
+    <polygon points="100,20 102,26 108,26 103,30 105,36 100,32 95,36 97,30 92,26 98,26" transform="translate(0,-2) scale(0.9) translate(11,2)" />
+    <polygon points="100,20 102,26 108,26 103,30 105,36 100,32 95,36 97,30 92,26 98,26" transform="translate(-32,4) scale(0.7) translate(43,6)" />
+    <polygon points="100,20 102,26 108,26 103,30 105,36 100,32 95,36 97,30 92,26 98,26" transform="translate(32,4) scale(0.7) translate(43,6)" />
+  </g>
+
+  <!-- Laurel Wreath Left -->
+  <g fill="url(#goldGrad)" opacity="0.95">
+    <path d="M42 96 C40 85 45 74 52 66 C51 72 53 79 57 84 C51 86 46 90 42 96 Z" />
+    <path d="M37 114 C36 103 40 93 48 85 C47 91 49 98 54 103 C47 104 42 108 37 114 Z" />
+    <path d="M40 132 C41 121 47 112 55 106 C53 111 55 118 60 122 C53 123 46 126 40 132 Z" />
+    <path d="M50 148 C53 138 60 130 70 126 C67 131 68 137 72 142 C65 141 57 143 50 148 Z" />
+  </g>
+
+  <!-- Laurel Wreath Right -->
+  <g fill="url(#goldGrad)" opacity="0.95" transform="translate(200, 0) scale(-1, 1)">
+    <path d="M42 96 C40 85 45 74 52 66 C51 72 53 79 57 84 C51 86 46 90 42 96 Z" />
+    <path d="M37 114 C36 103 40 93 48 85 C47 91 49 98 54 103 C47 104 42 108 37 114 Z" />
+    <path d="M40 132 C41 121 47 112 55 106 C53 111 55 118 60 122 C53 123 46 126 40 132 Z" />
+    <path d="M50 148 C53 138 60 130 70 126 C67 131 68 137 72 142 C65 141 57 143 50 148 Z" />
+  </g>
+
+  <!-- Open Book of Knowledge in Shield -->
+  <!-- Left Page -->
+  <path d="M100 88 C90 84 75 83 66 86 C65 98 65 105 66 113 C76 110 90 111 100 116 Z"
+        fill="#FAF8F5" stroke="url(#goldGrad)" stroke-width="1.8" />
+  <!-- Right Page -->
+  <path d="M100 88 C110 84 125 83 134 86 C135 98 135 105 134 113 C124 110 110 111 100 116 Z"
+        fill="#FAF8F5" stroke="url(#goldGrad)" stroke-width="1.8" />
+  <!-- Book Spine Center -->
+  <line x1="100" y1="88" x2="100" y2="116" stroke="url(#goldGrad)" stroke-width="2" />
+
+  <!-- Book Lines (Wisdom) -->
+  <line x1="72" y1="94" x2="94" y2="92" stroke="#722F37" stroke-width="1.2" opacity="0.7" />
+  <line x1="72" y1="100" x2="94" y2="98" stroke="#722F37" stroke-width="1.2" opacity="0.7" />
+  <line x1="72" y1="106" x2="94" y2="104" stroke="#722F37" stroke-width="1.2" opacity="0.7" />
+
+  <line x1="106" y1="92" x2="128" y2="94" stroke="#722F37" stroke-width="1.2" opacity="0.7" />
+  <line x1="106" y1="98" x2="128" y2="100" stroke="#722F37" stroke-width="1.2" opacity="0.7" />
+  <line x1="106" y1="104" x2="128" y2="106" stroke="#722F37" stroke-width="1.2" opacity="0.7" />
+
+  <!-- Torch / Flame of Wisdom above Book -->
+  <path d="M100 52 C104 59 108 64 105 72 C101 77 95 76 94 71 C93 65 97 60 100 52 Z"
+        fill="#FF9100" stroke="url(#goldGrad)" stroke-width="1" />
+  <path d="M100 58 C102 62 104 65 102 69 C100 72 97 71 96 68 C96 65 98 62 100 58 Z"
+        fill="#FFD54F" />
+  <!-- Torch Handle Base -->
+  <polygon points="97,75 103,75 102,83 98,83" fill="url(#goldGrad)" stroke="#FF8F00" stroke-width="0.5" />
+
+  <!-- Ribbon at Bottom -->
+  <path d="M46 156 L70 148 L100 152 L130 148 L154 156 L144 168 L100 162 L56 168 Z"
+        fill="url(#goldGrad)" stroke="#58111A" stroke-width="1" filter="url(#crestShadow)" />
+
+  <!-- University Acronym / Established -->
+  <text x="100" y="160" text-anchor="middle" fill="#58111A" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="9" letter-spacing="2">
+    PRAGATI
+  </text>
+</svg>

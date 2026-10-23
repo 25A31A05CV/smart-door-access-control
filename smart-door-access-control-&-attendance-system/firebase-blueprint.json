@@ -1,0 +1,105 @@
+{
+  "entities": {
+    "CollegeUser": {
+      "title": "CollegeUser",
+      "description": "Student or Faculty profile with RFID, Face ID and door permissions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "rollNumber": { "type": "string" },
+        "role": { "type": "string", "enum": ["Student", "Faculty", "Staff"] },
+        "department": { "type": "string" },
+        "yearOrDesignation": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "photoUrl": { "type": "string" },
+        "rfidCardId": { "type": "string" },
+        "barcode": { "type": "string" },
+        "permissions": {
+          "type": "object",
+          "properties": {
+            "gate": { "type": "boolean" },
+            "lab": { "type": "boolean" },
+            "library": { "type": "boolean" },
+            "hostel": { "type": "boolean" }
+          }
+        },
+        "status": { "type": "string", "enum": ["ACTIVE", "SUSPENDED"] },
+        "isInsideCampus": { "type": "boolean" },
+        "currentLocation": { "type": "string" },
+        "registeredAt": { "type": "string" }
+      },
+      "required": ["id", "name", "rollNumber", "role", "department", "permissions", "status"]
+    },
+    "AccessLog": {
+      "title": "AccessLog",
+      "description": "Recorded physical door access or automated attendance transaction",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "rollNumber": { "type": "string" },
+        "role": { "type": "string" },
+        "department": { "type": "string" },
+        "photoUrl": { "type": "string" },
+        "location": { "type": "string" },
+        "locationName": { "type": "string" },
+        "direction": { "type": "string", "enum": ["ENTRY", "EXIT"] },
+        "status": { "type": "string", "enum": ["GRANTED", "DENIED"] },
+        "reason": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "verificationMethod": { "type": "string" },
+        "doorRelayTriggered": { "type": "boolean" }
+      },
+      "required": ["id", "userId", "userName", "rollNumber", "location", "direction", "status", "timestamp"]
+    },
+    "AdminCredential": {
+      "title": "AdminCredential",
+      "description": "Authorized administrator or faculty account with customizable credentials and security roles",
+      "type": "object",
+      "properties": {
+        "username": { "type": "string" },
+        "passwordHash": { "type": "string" },
+        "fullName": { "type": "string" },
+        "designation": { "type": "string" },
+        "role": { "type": "string", "enum": ["Super Administrator", "Chief Warden", "Security Officer"] },
+        "lastLogin": { "type": "string" }
+      },
+      "required": ["username", "passwordHash", "fullName", "role"]
+    },
+    "AppUser": {
+      "title": "AppUser",
+      "description": "Authenticated Firebase user session and profile",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "CollegeUser",
+      "description": "Collection of enrolled college student and faculty member profiles"
+    },
+    "/accessLogs/{logId}": {
+      "schema": "AccessLog",
+      "description": "Collection of recorded turnstile and door scanner attendance events"
+    },
+    "/adminCredentials/{adminId}": {
+      "schema": "AdminCredential",
+      "description": "Collection of customizable administrator credentials and clearance roles"
+    },
+    "/appUsers/{uid}": {
+      "schema": "AppUser",
+      "description": "Authenticated operators and security personnel"
+    }
+  }
+}
